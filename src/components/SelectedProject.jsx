@@ -1,3 +1,4 @@
+import Tasks from "./Tasks";
 export default function SelectedProject({ project, onDeleteProject }) {
   const formattedDate = new Date(project.dueDate).toLocaleDateString("en-US", {
     day: "numeric",
@@ -23,6 +24,7 @@ export default function SelectedProject({ project, onDeleteProject }) {
           {project.description}
         </p>
       </header>
+      <Tasks />
     </div>
   );
 }
